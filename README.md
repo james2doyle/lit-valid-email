@@ -1,6 +1,6 @@
 # lit-valid-email
 
-Check is an email address is valid.
+Check if an email address is valid.
 
 ### Sidenote
 
