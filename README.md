@@ -10,7 +10,7 @@ This took me a couple hours to craft. I finally got it returning the right resul
 
 This library has multiple returns
 
-```
+```lua
 local validemail = require('valid-email')
 
 local result, message = validemail('james2doyle@gmail.com')
