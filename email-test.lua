@@ -20,6 +20,8 @@ local validList = {
 local invalidList = {
   'Abc.example.com',
   'A@b@c@example.com',
+  'a.little.lengthy.but.fine.a.little.lengthy.but.fine.a.little.lengthy.but.fine@dept.example.com',
+  'solid-local-name@dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.dept.example.com',
   'a\"b(c)d,e:f;g<h>i[jk]l@example.com',
   'just"not"right@example.com',
   'this is"not\allowed@example.com',
@@ -33,11 +35,13 @@ local invalidList = {
 print('The following should all be true')
 
 for i = 1, #validList do
-  print(validemail(validList[i]), validList[i])
+  local val, err = validemail(validList[i])
+  print(val, err, validList[i])
 end
 
 print('The following should all be nil')
 
 for i = 1, #invalidList do
-  print(validemail(invalidList[i]), invalidList[i])
+  local val, err = validemail(invalidList[i])
+  print(val, err, invalidList[i])
 end
